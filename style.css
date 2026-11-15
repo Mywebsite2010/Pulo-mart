@@ -1,0 +1,428 @@
+/* PULO MART - MAIN STYLES */
+
+:root {
+  --green: #082315;
+  --green-light: #123c25;
+  --gold: #f5c542;
+  --cream: #fff8e9;
+  --white: #ffffff;
+  --text: #172c1e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* HEADER */
+
+.header {
+  background: var(--green);
+  color: white;
+  padding: 12px 3%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand img {
+  width: 230px;
+  max-height: 75px;
+  object-fit: contain;
+}
+
+.search-box {
+  display: flex;
+  flex: 1;
+  max-width: 550px;
+  background: white;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.search-box input {
+  flex: 1;
+  min-width: 0;
+  padding: 14px 18px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+
+.search-box button {
+  background: var(--gold);
+  border: none;
+  padding: 0 22px;
+  font-weight: bold;
+}
+
+.header-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.header-actions button {
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* NAVIGATION */
+
+.navbar {
+  background: var(--green-light);
+  padding: 15px 3%;
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  flex-wrap: wrap;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.navbar a:hover {
+  color: var(--gold);
+}
+
+/* HERO */
+
+.hero {
+  background: var(--green);
+  color: white;
+  min-height: 330px;
+  padding: 40px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero h1 {
+  font-size: clamp(35px, 5vw, 65px);
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  color: var(--gold);
+}
+
+.hero p {
+  font-size: 19px;
+  margin-bottom: 25px;
+}
+
+.shop-btn {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--green);
+  padding: 13px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero-image {
+  flex: 1;
+}
+
+.hero-image img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+}
+
+/* GENERAL SECTIONS */
+
+.section {
+  padding: 35px 3%;
+}
+
+.section h2 {
+  font-size: 25px;
+  margin-bottom: 22px;
+  color: var(--green);
+}
+
+/* CATEGORIES */
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 12px;
+}
+
+.category-card {
+  background: #fff0d5;
+  border: 1px solid #ead5a9;
+  border-radius: 14px;
+  min-height: 100px;
+  padding: 20px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.category-card:hover {
+  background: var(--gold);
+  transform: translateY(-3px);
+}
+
+/* PRODUCTS */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.product-card {
+  background: white;
+  border: 1px solid #e6d7b8;
+  border-radius: 14px;
+  padding: 15px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+}
+
+.product-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+.product-card h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.product-card p {
+  margin-bottom: 12px;
+}
+
+.product-card button {
+  background: var(--green);
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.product-card button:hover {
+  background: #176537;
+}
+
+/* OFFERS */
+
+.offers {
+  margin: 10px 3%;
+  padding: 30px;
+  background: var(--green);
+  color: white;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.offers h2 {
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.offers a {
+  background: var(--gold);
+  color: var(--green);
+  padding: 12px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* PROMISE */
+
+.promise {
+  background: #f6e9c8;
+  text-align: center;
+  margin: 20px 3%;
+  border-radius: 15px;
+}
+
+/* REVIEWS */
+
+#review-list {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+}
+
+/* FOOTER */
+
+footer {
+  background: var(--green);
+  color: white;
+  text-align: center;
+  padding: 35px 20px;
+}
+
+footer h2 {
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+footer p {
+  margin: 12px 0;
+  font-size: 14px;
+}
+
+/* WHATSAPP */
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  z-index: 100;
+  background: #159b50;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .category-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .brand img {
+    width: 160px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .header {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .brand img {
+    width: 145px;
+  }
+
+  .header-actions {
+    gap: 10px;
+  }
+
+  .search-box {
+    order: 3;
+    flex-basis: 100%;
+    max-width: none;
+  }
+
+  .search-box input {
+    padding: 12px;
+  }
+
+  .navbar {
+    justify-content: flex-start;
+    gap: 22px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+  }
+
+  .navbar a {
+    white-space: nowrap;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 35px 20px;
+  }
+
+  .hero-image img {
+    max-height: 190px;
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .product-card {
+    padding: 10px;
+  }
+
+  .product-card img {
+    height: 125px;
+  }
+
+  .product-card h3 {
+    font-size: 14px;
+  }
+
+  .offers {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .section {
+    padding: 25px 15px;
+  }
+
+  .section h2 {
+    font-size: 21px;
+  }
+
+  .whatsapp-button {
+    right: 12px;
+    bottom: 15px;
+    padding: 13px 16px;
+    font-size: 13px;
+  }
+}
