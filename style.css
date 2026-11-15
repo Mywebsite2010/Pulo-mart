@@ -1170,3 +1170,38 @@ footer a {
   color: #082315;
   font-size: 19px;
   }
+.product-details h3 {
+  margin: 5px 0;
+  color: #082315;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.product-details p {
+  line-height: 1.5;
+}
+
+.product-bottom .add-button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  background: #082315;
+  color: #f5c542;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.product-bottom .add-button:hover {
+  background: #145331;
+}
+
+.product-card {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(8, 35, 21, 0.12);
+}
