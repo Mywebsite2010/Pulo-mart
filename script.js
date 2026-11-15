@@ -46,6 +46,38 @@ function displayProducts(items = products) {
     card.className = "product-card";
 
     card.innerHTML = `
+      <div class="product-image-placeholder">
+        ${product.image
+          ? `<img src="${product.image}" alt="${product.name}">`
+          : `<span>🛒</span>`
+        }
+      </div>
+
+      <div class="product-details">
+        <p class="product-category">${product.category}</p>
+        <h3>${product.name}</h3>
+        <p class="product-weight">${product.weight}</p>
+
+        <div class="product-bottom">
+          <strong>₹${product.price}</strong>
+          <button class="add-button">Add to Cart</button>
+        </div>
+      </div>
+    `;
+
+    card.querySelector(".add-button").addEventListener("click", () => {
+      addToCart(product.id);
+    });
+
+    productList.appendChild(card);
+  });
+}
+
+  items.forEach(product => {
+    const card = document.createElement("div");
+    card.className = "product-card";
+
+    card.innerHTML = `
       <div class="product-image-placeholder">🛒</div>
       <h3>${product.name}</h3>
       <p>${product.weight}</p>
